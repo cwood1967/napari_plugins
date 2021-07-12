@@ -22,7 +22,7 @@ with open('requirements.txt') as f:
 
 
 # https://github.com/pypa/setuptools_scm
-use_scm = {"write_to": "napari_dock/_version.py"}
+use_scm = {"write_to": "_version.py"}
 
 setup(
     name='napari-analysis_plugins',
@@ -55,6 +55,7 @@ setup(
     entry_points={
         'napari.plugin': [
             'napari-histogram = analysis.histogram_plugin',
+            'napari-lineprofile = analysis.line_profile_plugin',
         ],
     },
 )
